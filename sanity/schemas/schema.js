@@ -6,7 +6,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // We import object and document schemas
 import category from "./category";
-import restaurant from "./restaurant";
+import restaurants from "./restaurant";
 import dish from "./dish";
 import featured from "./featured";
 
@@ -16,5 +16,5 @@ export default createSchema({
   name: "default",
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([restaurant, category, dish, featured]),
+  types: schemaTypes.concat([restaurants, category, dish, featured]),
 });

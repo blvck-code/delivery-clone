@@ -17,6 +17,7 @@ import {
 import Categories from "./components/Categories";
 import FeaturedRow from "./components/FeaturedRow";
 import sanityClient from "../sanity";
+import axios from "axios";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -87,8 +88,9 @@ const HomeScreen = () => {
       <ScrollView
         className="bg-gray-100"
         contentContainerStyle={{
-          paddingBottom: 100,
-        }}>
+          paddingBottom: 120,
+        }}
+      >
         {/* Categories  */}
         <Categories />
 

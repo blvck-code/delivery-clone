@@ -5,7 +5,9 @@ import { urlFor } from "../sanity";
 import {
   ArrowLeftIcon,
   StarIcon,
-  MapPinIcon, QuestionMarkCircleIcon, ChevronRightIcon,
+  MapPinIcon,
+  QuestionMarkCircleIcon,
+  ChevronRightIcon,
 } from "react-native-heroicons/solid";
 import DishRow from "./components/DishRow";
 
@@ -44,7 +46,8 @@ const RestaurantScreen = () => {
         />
         <TouchableOpacity
           className="absolute top-14 left-5 p-2 bg-gray-100 rounded-full"
-          onPress={navigation.goBack}>
+          onPress={navigation.goBack}
+        >
           <ArrowLeftIcon size={20} color="#00CCBB" />
         </TouchableOpacity>
       </View>
@@ -52,6 +55,7 @@ const RestaurantScreen = () => {
       <View className="bg-white">
         <View className="px-4 pt-4">
           <Text className="text-3xl font-bold">{title}</Text>
+
           <View className="flex-row space-x-2 my-1">
             <View className="flex-row items-center space-x-1">
               <StarIcon color="green" opacity={0.5} size={22} />
@@ -81,8 +85,6 @@ const RestaurantScreen = () => {
         <Text className="px-4 pt-6 mb-3 font-bold text-xl">Menu</Text>
 
         {/*Dishrows*/}
-
-
         {dishes.map((dish) => (
           <DishRow
             key={dish._id}
